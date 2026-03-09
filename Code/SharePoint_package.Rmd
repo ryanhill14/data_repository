@@ -1,0 +1,32 @@
+---
+title: "SarePoint Package"
+subtitle: "Ryan Hill, 09/03/2026"
+abstract: "SharePoint package in R."
+header-includes:
+   - \usepackage{amsmath}
+output: 
+  pdf_document: default
+  df_print: paged
+geometry:
+  - tmargin=1.5cm
+  - bmargin=1.5cm
+  - lmargin=1.5cm
+  - rmargin=1.5cm 
+---
+\fontsize{10}{10}
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, out.width="65%", size="small")
+```
+
+
+### 0.0.0 - Packages Used in Report
+
+```{r warning=FALSE, message=FALSE, results='hide'}
+if(!require(pacman)){install.packages("pacman")}
+pacman::p_load(knitr, tidyverse, dplyr)
+```
+
+
+### 1.0.0 - The SharePoint R package
+
