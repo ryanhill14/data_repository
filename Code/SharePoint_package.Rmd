@@ -30,3 +30,18 @@ pacman::p_load(knitr, tidyverse, dplyr)
 
 ### 1.0.0 - The SharePoint R package
 
+```{r installing-package}
+
+# line to install the package for first time
+# remotes::install_github("department-for-transport-public/sharepointr")
+
+```
+
+```{r using-SharePointr}
+
+## test the following
+# reading files
+# uploading files
+# saving outputs directly to SharePoint (and not on local repository)
+
+```
