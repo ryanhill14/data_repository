@@ -24,7 +24,7 @@ knitr::opts_chunk$set(echo = TRUE, out.width="65%", size="small")
 
 ```{r warning=FALSE, message=FALSE, results='hide'}
 if(!require(pacman)){install.packages("pacman")}
-pacman::p_load(knitr, tidyverse, dplyr)
+pacman::p_load(knitr, tidyverse, dplyr, sharepointr)
 ```
 
 
@@ -37,11 +37,23 @@ pacman::p_load(knitr, tidyverse, dplyr)
 
 ```
 
+See the following link for guideance: https://github.com/department-for-transport-public/sharepointr
+
 ```{r using-SharePointr}
 
 ## test the following
 # reading files
 # uploading files
 # saving outputs directly to SharePoint (and not on local repository)
+
+# SharePoint URL = https://departmentfortransportuk.sharepoint.com/sites/MSRSRetrospectiveEvaluation-ExternalChannelRT-FAB-LSCA/Shared%20Documents/Forms/AllItems.aspx?FolderCTID=0x01200060A658E9F5AB5049B3798193E807C78E&id=%2Fsites%2FMSRSRetrospectiveEvaluation%2DExternalChannelRT%2DFAB%2DLSCA%2FShared%20Documents%2FGeneral%2FIpsos%5FAtkins%20working%20docs
+
+yoursite <- "MSRSRetrospectiveEvaluation-ExternalChannelRT-FAB-LSCA"
+Shared_Documents <- "Shared_Documents"
+yourfolder <- "Forms/AllItems.aspx?FolderCTID=0x01200060A658E9F5AB5049B3798193E807C78E&id=%2Fsites%2FMSRSRetrospectiveEvaluation%2DExternalChannelRT%2DFAB%2DLSCA%2FShared%20Documents%2FGeneral%2FIpsos%5FAtkins%20working%20docs" 
+
+list_sharepoint_objects(site = yoursite, drive = Shared_Documents, path = yourfolder)
+# the following needs admin approval, I think from AR side
+
 
 ```
